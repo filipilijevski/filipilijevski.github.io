@@ -1,17 +1,19 @@
 {
   "name": "filipilijevski.github.io",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "homepage": "https://github.com/filipilijevski/filipilijevski.github.io",
+
+  "homepage": "https://filipilijevski.github.io/",
+
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "build": "vite build",
     "preview": "vite preview",
+
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+
   "dependencies": {
     "bootstrap": "^5.3.6",
     "react": "^19.1.0",
