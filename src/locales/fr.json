@@ -1,0 +1,16 @@
+{
+  "dashboardTitle": "Tableau d'Actions",
+
+  "priceTrend": "Tendance des cours de clôture mensuels",
+  "volumeComparison": "Comparaison des volumes mensuels",
+  "volumeTrend": "Volume Mensuel",
+
+  "metricPrice": "Prix",
+  "metricVolume": "Volume",
+  "selectMonth": "Sélectionner le mois",
+  "dateRange": "Plage de dates",
+  "ticker": "Symbole",
+
+  "loading": "Chargement…",
+  "toggleLanguage": "Langue"
+}

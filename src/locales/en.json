@@ -1,0 +1,17 @@
+{
+  "dashboardTitle": "Market Dashboard",
+
+  "priceTrend": "Monthly Closing Price Trend",
+  "priceBar": "Price Snapshot",
+  "volumeTrend": "Monthly Volume",
+  "volumeComparison": "Monthly Volume Comparison",
+
+  "metricPrice": "Price",
+  "metricVolume": "Volume",
+  "selectMonth": "Select month",
+  "dateRange": "Date range",
+  "ticker": "Ticker",
+
+  "loading": "Loading…",
+  "toggleLanguage": "Language"
+}

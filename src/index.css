@@ -1,0 +1,305 @@
+/* main themes */
+
+:root {
+  /* brand colours */
+  --bs-primary: #7577bb;
+  --bs-accent:  #35407e;
+  --bs-dropdown-link-active-color: #ffffff;
+  --bs-dropdown-link-active-bg: #7179a036;
+
+  /* typography */
+  --bs-font-sans-serif: 'Open Sans', system-ui, sans-serif;
+  --heading-font: 'Poppins', system-ui, sans-serif;
+  --link-fg: #cfd4ff;   /* lightened primary tint for links */
+  --link-hover: #ffffff;
+}
+
+/* global base */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background: linear-gradient(270deg, rgba(70, 70, 199, 0.7) 30%, rgba(17, 45, 104, 0.4) 100%);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  display: block;         
+}
+
+/* headings */
+h1, h2, h3 {
+  font-family: var(--heading-font);
+}
+
+/* links */
+a {
+  color: var(--link-fg);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;              
+}
+
+a:focus-visible {
+  outline: 2px dashed var(--link-hover);
+  outline-offset: 2px;
+}
+
+/* branding */
+
+.my-name {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 1100;
+}
+
+/* navigation */
+
+.menu-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+.menu-toggle .navbar-toggler-icon {
+  width: 40px; 
+  height: 40px;
+  background-image: url('/assets/hamborger.png');
+}
+
+.top-links { 
+  display: none !important; 
+}
+
+.dropdown-menu { 
+  background: transparent; 
+  border-radius: 0.75rem; 
+}
+
+.dropdown-item { 
+  color: #ffffff; 
+  text-align: center; 
+  font-weight: 600; 
+  background: transparent;  
+}
+
+.dropdown-item:hover { 
+  background: #7179a036; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02); 
+}
+
+
+/* hero */
+
+.hero-section {
+  min-height: 70vh;
+  background: linear-gradient(180deg, rgba(15,15,43,0.7) 10%, rgba(137,169,238,0.1) 90%),
+              url("/assets/betterns3.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 3rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* about */
+
+.about-section {
+  background: var(--bs-accent);
+  color: #fff8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: -3rem auto 2rem;
+  max-width: 650px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.about-section img { 
+  max-width: 350px; 
+  border-radius: 10%; 
+}
+
+/* projects */
+
+.projects-section {
+  background: var(--bs-accent);
+  color: #fff8f0;
+  padding: 1rem 0.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  max-width: 1000px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.project-cols  { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.project-card  {
+  background: var(--bs-primary);
+  border-radius: 1rem;
+  width: 190px;
+  padding: 1em 1.5em 1.5em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+
+.project-card:hover   { transform: translateY(-6px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+.project-title        { font-weight: 700; font-size: 1.1rem; color: #fff8f0; }
+.project-status       { font-size: 0.875rem; color: #fff8f0; }
+.project-images img   { width: 150px; height: 150px; border-radius: 15%; }
+
+/* quick helper */
+
+.page-wrapper        { min-height: 100vh; display: flex; flex-direction: column; }
+.page-wrapper .hero-section { flex: 1 0 auto; }
+
+/* footer */
+
+.footer {
+  background: var(--bs-accent);
+  color: #e5e5e5;
+  padding: 1rem 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* no blue highlight by Bootstrap, oddly difficult to get rid of? */
+
+.dropdown-item.active{
+  color:var(--bs-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: transparent
+}
+
+.dropdown-item.active { 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02);  
+}
+
+
+.service-form {
+  background-color: var(--bs-accent) !important; 
+  background: #7179a036;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.btn-group {
+  background: transparent;
+  color:#ffffff;
+}
+
+.result-card-image {
+  width: 100%;
+  height: 142px;          
+  object-fit: cover;
+  padding: 0.5em;      /* crop to fill with no distortion */
+}
+
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.modal-card {
+  background: #ffffff;
+  color: #222;
+  border-radius: 0.6rem;
+  width: 100%;
+  max-width: 520px;
+  padding: 1.5rem 1.75rem 2rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* small coloured squares for availability with results on search */
+.legend-square {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.btn-group.mb-4 {
+  border-color: #35407e;
+  background: transparent;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* idle state */
+.coach-player-toggle .btn-outline-primary {
+  --bs-btn-color:        #ffffff;   
+  --bs-btn-border-color: #ffffff;
+}
+
+/* hover */
+.coach-player-toggle .btn-outline-primary:hover {
+  --bs-btn-color:        #ffffff;
+  --bs-btn-bg:           #4a2dcc50;
+  --bs-btn-border-color: #4e01a7;
+}
+
+/* selected  */
+.coach-player-toggle .btn-check:checked + .btn-outline-primary,
+.coach-player-toggle .btn-check:active + .btn-outline-primary {
+  --bs-btn-color:        #ffffff;
+  --bs-btn-bg:           #4a2dcc50;   
+  --bs-btn-border-color: #4e01a7;
+}
+
+/* ──────────────────────────────────────────
+   UNIVERSAL FIXED-NAVBAR SPACER
+   (no more manual margins; works site-wide)
+   ────────────────────────────────────────── */
+:root {
+  --navbar-h: 56px;               /* update if your Navbar height changes */
+
+  /* optional store palette */
+  --shop-page-bg:  #f5f7ff;
+  --shop-card-bg:  #ffffff;
+  --shop-card-fg:  #212529;
+}
+
+/* Ensure the navbar itself is fixed-top (edit Navbar.tsx if needed):
+     <nav className="navbar … fixed-top"> */
+
+.nav-spacer {
+  /* push page content below the fixed navbar */
+  padding-top: var(--navbar-h);
+}
+
+/* Store-specific header */
+.shop-header img {
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.25));
+}
+
+.card-title { margin-bottom: 0.75rem; }
+
